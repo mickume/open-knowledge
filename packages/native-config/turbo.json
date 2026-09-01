@@ -3,12 +3,14 @@
   "tasks": {
     "build": {
       "inputs": ["Cargo.toml", "Cargo.lock", "build.rs", "src/**/*.rs", "package.json"],
-      "outputs": ["index.js", "index.d.ts", "*.node"]
+      "outputs": ["index.js", "index.d.ts", "*.node"],
+      "passThroughEnv": ["RUSTUP_HOME", "CARGO_HOME", "RUSTUP_TOOLCHAIN"]
     },
     "test": {
       "dependsOn": [],
       "inputs": ["Cargo.toml", "Cargo.lock", "build.rs", "src/**/*.rs"],
-      "outputs": []
+      "outputs": [],
+      "passThroughEnv": ["RUSTUP_HOME", "CARGO_HOME", "RUSTUP_TOOLCHAIN"]
     }
   }
 }

@@ -28,9 +28,9 @@ name: Draft release janitor
 # (npm-provenance source ref + version lineage); only the Release object goes.
 
 on:
-  schedule:
-    # Every 6 hours, off the hour to avoid the top-of-hour scheduler surge.
-    - cron: "37 */6 * * *"
+  #schedule:
+  #  # Every 6 hours, off the hour to avoid the top-of-hour scheduler surge.
+  #  - cron: "37 */6 * * *"
   # Manual sweep, e.g. right after a known stuck-draft incident.
   workflow_dispatch:
 
